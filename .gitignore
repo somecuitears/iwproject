@@ -1,0 +1,10 @@
+#Folder to Ignore
+Untracked/
+bin/
+obj/
+.vs/
+
+#Files to ignore
+.bmp
+.tmp
+.log
