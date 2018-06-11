@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IwProject.Consol.Basic;
+using System;
 
 namespace IwProject.Consol
 {
@@ -6,8 +7,8 @@ namespace IwProject.Consol
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
+            BasicTask _basic = new BasicTask();
+            _basic.Display("Hello World!");
         }
     }
 }
