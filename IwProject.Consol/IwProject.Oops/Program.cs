@@ -1,4 +1,5 @@
 ﻿using IwProject.Oops.Features;
+using IwProject.Oops.Features.Abstraction;
 using IwProject.Oops.Features.Inheritance;
 using System;
 
@@ -52,7 +53,22 @@ namespace IwProject.Oops
             {
                 Console.WriteLine("Inheritance....");
             }
+            Console.WriteLine();
+
+            Shape2D shape2D = new Shape2D();
+            shape2D.Length = 10;
+            shape2D.Breadth = 20;
+            shape2D.Display();
+            Console.WriteLine("Area " + shape2D.Area());
+            Console.WriteLine();
+
+            Shape3D shape3D = new Shape3D(10, 20, 30);
+            shape3D.Display();
+            Console.WriteLine("Volume: " + shape3D.Area());
+            Console.WriteLine();
             Console.ReadKey();
+
+
         }
     }
 }
