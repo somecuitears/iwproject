@@ -5,6 +5,6 @@ obj/
 .vs/
 
 #Files to ignore
-.bmp
+.bin
 .tmp
 .log
