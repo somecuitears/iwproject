@@ -25,6 +25,9 @@ namespace IwProject.Oops
             polymorphismFeature.MethodOne();
             polymorphismFeature.MethodOne("Sent from Main");
 
+            EncapsulationFeature encapsulationFeature = new EncapsulationFeature();
+            encapsulationFeature.Teat("Encap'd Data");
+
             Console.ReadKey();
         }
     }
