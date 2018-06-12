@@ -16,7 +16,7 @@ namespace IwProject.Oops.Features
         public void MethodOne(String message)
         {
             Message = message;
-            Console.WriteLine("Function Overloading One Argument. Message: "+ Message);
+            Console.WriteLine("Function Overloading One Argument. Message: " + Message);
         }
 
 
