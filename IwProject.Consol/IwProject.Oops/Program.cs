@@ -1,6 +1,7 @@
 ﻿using IwProject.Oops.Features;
 using IwProject.Oops.Features.Abstraction;
 using IwProject.Oops.Features.Inheritance;
+using IwProject.Oops.Features.Interface;
 using System;
 
 namespace IwProject.Oops
@@ -9,27 +10,30 @@ namespace IwProject.Oops
     {
         static void Main(string[] args)
         {
-            InheritanceFeature inheritanceFeature = new InheritanceFeature();
-            inheritanceFeature.MethodOne();
-            inheritanceFeature.MethodTwo();
+            OldOne();
+            NewOne();
+            InterfaceFn();
+            Console.ReadKey();
+        }
+
+        private static void InterfaceFn()
+        {
+            Student student = new Student("Ram", "984312345");
+            student.Display();
+            student.Subjects();
             Console.WriteLine();
-            MultilevelInheritanceFeature multilevelInheritance = new MultilevelInheritanceFeature();
-            multilevelInheritance.MethodOne();
-            multilevelInheritance.MethodTwo();
-            Console.WriteLine();
-            ImpInterfaceFeature impInterfaceFeature = new ImpInterfaceFeature();
-            impInterfaceFeature.MethodOneI();
-            impInterfaceFeature.MethodTwoI();
-            impInterfaceFeature.MethodOneIT();
-            impInterfaceFeature.MethodTwoIT();
-            Console.WriteLine();
-            PolymorphismFeature polymorphismFeature = new PolymorphismFeature();
-            polymorphismFeature.MethodOne();
-            polymorphismFeature.MethodOne("Sent from Main");
-            Console.WriteLine();
-            EncapsulationFeature encapsulationFeature = new EncapsulationFeature();
-            encapsulationFeature.Teat("Encap'd Data");
-            Console.WriteLine();
+            Teacher th = new Teacher()
+            {
+                Contact = "984521524",
+                Name = "Shyam",
+            };
+            th.Display();
+            th.Subjects();
+
+        }
+
+        private static void NewOne()
+        {
             //Beter Version
             Dog dog = new Dog("Corgi", 4, "Yes", "Tommy", "DogPhylum", 13, "DogSpecies");
             Console.WriteLine("From Dog Object");
@@ -66,9 +70,31 @@ namespace IwProject.Oops
             shape3D.Display();
             Console.WriteLine("Volume: " + shape3D.Area());
             Console.WriteLine();
-            Console.ReadKey();
-
-
+            
+        }
+        private static void OldOne()
+        {
+            InheritanceFeature inheritanceFeature = new InheritanceFeature();
+            inheritanceFeature.MethodOne();
+            inheritanceFeature.MethodTwo();
+            Console.WriteLine();
+            MultilevelInheritanceFeature multilevelInheritance = new MultilevelInheritanceFeature();
+            multilevelInheritance.MethodOne();
+            multilevelInheritance.MethodTwo();
+            Console.WriteLine();
+            ImpInterfaceFeature impInterfaceFeature = new ImpInterfaceFeature();
+            impInterfaceFeature.MethodOneI();
+            impInterfaceFeature.MethodTwoI();
+            impInterfaceFeature.MethodOneIT();
+            impInterfaceFeature.MethodTwoIT();
+            Console.WriteLine();
+            PolymorphismFeature polymorphismFeature = new PolymorphismFeature();
+            polymorphismFeature.MethodOne();
+            polymorphismFeature.MethodOne("Sent from Main");
+            Console.WriteLine();
+            EncapsulationFeature encapsulationFeature = new EncapsulationFeature();
+            encapsulationFeature.Teat("Encap'd Data");
+            Console.WriteLine();
         }
     }
 }
