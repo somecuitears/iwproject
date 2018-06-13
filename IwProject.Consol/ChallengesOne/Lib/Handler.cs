@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ChallengesOne.Lib
 {
-    public class IOHandle
+    public class Handler
     {
         private String _time, _duration;
         int tHr = 0, tMin = 0;
@@ -36,31 +36,52 @@ namespace ChallengesOne.Lib
                 if (tMin >= 60)
                     tHr++;
                 tMin = OffSet(tMin, 60);
-                Console.WriteLine(ZeroFormat(tHr) + " " + ZeroFormat(tMin));
+                DisplayResult(null);
             }
             else
             {
-                Console.Write("Invalid Date Format");
+                DisplayResult("error");
             }
 
         }
 
         private bool Initi(String _tempInput)
         {
+            
             _tempInput = Console.ReadLine();
             String[] subString = _tempInput.Split(" ");
+            try { 
             bool hrCheck = Int32.TryParse(subString[0], out int hour);
             bool minCheck = Int32.TryParse(subString[1], out int minute);
-            if (hrCheck && minCheck && hour >= 0 && hour <= 23 && minute >= 0 && minute <= 59)
-            {
-                tHr += hour;
-                tMin += minute;
-                return true;
+                if (hrCheck && minCheck && hour >= 0 && hour <= 23 && minute >= 0 && minute <= 59)
+                {
+                    tHr += hour;
+                    tMin += minute;
+                    return true;
+                }
             }
+            catch(Exception e)
+            {
+                
+                Console.Write("Enter 24 Hour time format seperated with space");
+            }
+            finally
+            {
+                Initi(_tempInput);
+            }
+            
 
             return true;
         }
 
+        private void DisplayResult(String message)
+        {
+            if (!message.Equals(null))
+            {
+                Console.Write("Invalid Date Format");
+            }
+            Console.WriteLine(ZeroFormat(tHr) + " " + ZeroFormat(tMin));
+        }
 
         private int OffSet(int temp, int val)
         {

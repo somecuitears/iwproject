@@ -9,7 +9,7 @@ namespace ChallengesOne
         {
             do
             {
-                IOHandle iO = new IOHandle();
+                Handler iO = new Handler();
                 iO.Execute();
             } while (true);
         }
