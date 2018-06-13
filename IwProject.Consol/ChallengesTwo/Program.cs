@@ -10,8 +10,6 @@ namespace ChallengesTwo
         {
             // OldImplementation();
             BetterImplementation();
-
-
         }
 
         private static void BetterImplementation()
