@@ -8,6 +8,23 @@ namespace ChallengesTwo
     {
         static void Main(string[] args)
         {
+            // OldImplementation();
+            BetterImplementation();
+
+
+        }
+
+        private static void BetterImplementation()
+        {
+            Fibonacci fb = new Fibonacci();
+            do
+            {
+                fb.FastFinder(Decimal.Parse(Console.ReadLine()));
+            } while (true);
+        }
+
+        private static void OldImplementation()
+        {
             Fibonacci fb = new Fibonacci();
             List<Decimal> myList = fb.Generator(100);
             Decimal index = fb.Search(Decimal.Parse(Console.ReadLine()));
@@ -24,9 +41,7 @@ namespace ChallengesTwo
                 }
                 Console.WriteLine(vall.Substring(0, vall.Length - 1));
             }
-            //
             Console.ReadKey();
-
         }
     }
 }
