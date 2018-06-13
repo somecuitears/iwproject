@@ -17,6 +17,7 @@ namespace IwProject.Oops.Features.Abstraction
         public int Length { get; set; }
         public int Breadth { get; set; }
 
+        //Run-time polymorphism.
         public override int Area()
         {
             return Length * Breadth;

@@ -42,5 +42,13 @@ namespace IwProject.Oops.Features.Inheritance
         {
             Console.WriteLine("Class Cat : Meow....");
         }
+        //Runtime-Polymorphism
+        public override void Eat()
+        {
+            Console.WriteLine("Overridden:: Drinks Milk...");
+        }
+
+      
+
     }
 }

@@ -26,7 +26,8 @@ namespace IwProject.Oops.Features.Inheritance
         }
 
         //Methods
-        public void Eat()
+        //For Overriding virtual keyword is use.. doing so we can change the defination by overriding on derived class.
+        public virtual void Eat()
         {
             Console.WriteLine("Class Animal : Eating...");
         }

@@ -37,5 +37,14 @@ namespace IwProject.Oops.Features.Inheritance
         {
             Console.WriteLine("Class Dog : Bark.. Bark...");
         }
+
+        public override void Eat()
+        {
+            base.Eat();
+            Console.WriteLine("Overridden:: Eats Meat...");
+        }
+
+        //Runtime Polymorphism
+
     }
 }

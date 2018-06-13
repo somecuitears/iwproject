@@ -57,7 +57,7 @@ namespace IwProject.Oops.Features.Interface
 
         public void Subjects()
         {
-            Console.WriteLine("Write Subject....");
+            Console.WriteLine("Teach Subject....");
         }
     }
 }
