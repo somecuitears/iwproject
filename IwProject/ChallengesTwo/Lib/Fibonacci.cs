@@ -6,9 +6,10 @@ namespace ChallengesTwo.Lib
     public class Fibonacci
     {
         List<Decimal> fibList = new List<Decimal>();
-
+       
         public List<Decimal> Generator(Decimal upTo)
         {
+            
             int a = 0, b = 1;
             //Console.WriteLine(a);
             fibList.Add(a);
