@@ -40,7 +40,6 @@ function Validate() {
         DisplayError("nameError", "Please enter your name");
     } else {
         ClearError("nameError");
-
     }
 
     if (isNaN(zip.value) || zip.value.length != 6) {
