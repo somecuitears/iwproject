@@ -1,7 +1,8 @@
+/* exported Validate */
 var isValid = 1;
 
 function Validate() {
-    var index = 0;
+    //var index = 0;
     var emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/i;
 
     var fname = document.forms["jsFormValid"]["fname"];

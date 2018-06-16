@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheet/style.css" />
 </head>
 
-<body onload="checkForData();">
+<body onload="displayData();">
     <p id="result"></p>
     <div id="wrapper">
         <div id="top">
@@ -14,7 +14,7 @@
             <hr>
         </div>
         <div id="middle">
-            <input id="txtBox" type="text" placeholder="New TODO Item" onkeypress="myFunction(event);" />
+            <input id="txtBox" type="text" placeholder="New TODO Item" onkeypress="onPressingEnter(event);" />
         </div>
         <div class="clear"></div>
         <div id="bottom">
@@ -34,7 +34,8 @@
 -->
         </div>
     </div>
-    <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/rscript.js" type="text/javascript"></script>
+
 </body>
 
 </html>
