@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Klavika Bold", "FreightSans Pro", "Segoe UI Historic", "Segoe UI", "Helvetica", "Arial", sans-serif;
+}
+
+td {
+    padding-left: 10px;
+}
+
+.clear {
+    clear: both;
+}
+
+#wrapper {
+    width: :100%;
+    height: 831px;
+    background-image: url("../image/bg.png");
+    background-repeat: repeat-x;
+}
+
+#wrapper #container {
+    margin: 0 auto;
+    width: 70%;
+}
+
+#wrapper #top {
+    margin: 20px auto;
+
+}
+
+#wrapper #forgot {
+    color: #8b9dc3;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#wrapper .logo-placement {
+    font-family: "Klavika Bold", sans-serif;
+    font-weight: 600;
+    font-size: 42px;
+    color: white;
+    height: 10%;
+}
+
+#wrapper .logo {
+    position: absolute;
+    visibility: visible;
+    left: 185px;
+    top: 30px;
+    z-index: 200;
+    float: left;
+    width: 170px;
+}
+
+#wrapper .for-table {
+
+    position: absolute;
+    visibility: visible;
+    left: 775px;
+    top: 10px;
+    z-index: 200;
+    width: 150px;
+
+
+}
+
+#wrapper .for-table input {
+    width: 150px;
+    height: 20px;
+    border: 1px black solid;
+}
+
+
+
+.login-text {
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: Helvetica;
+}
+
+.login-button {
+    background-color: cornflowerblue;
+    border: 1px solid darkblue;
+    height: 24px;
+    width: 55px;
+}
+
+.login-button: hover {
+    background-color: darkblue;
+}
+
+
+
+
+#wrapper #middle {
+    margin: 0 auto;
+}
+
+#wrapper #footer {
+    margin: 0 auto;
+    width: 100%;
+    height: 20%;
+}
