@@ -13,9 +13,13 @@ namespace AssignmentOneQueue
         private int last;    //Enging of queue;
         private T[] _queue;
 
+        public bool InfOption { get; set; }
+
         public QueueGeneric()
         {
             this.sizeOfQueue = 10;
+            last = -1;
+            InfOption = false;
             _queue = new T[sizeOfQueue];
         }
 
@@ -25,14 +29,15 @@ namespace AssignmentOneQueue
             first = 0;
             length = 0;
             last = -1;
+            InfOption = false;
             _queue = new T[sizeOfQueue];
         }
 
-        public void AddItem(T item)
+        public void AddItemF(T item)
         {
             if (IsFull(this))
             {
-                Console.WriteLine("Queue Full");
+                Console.WriteLine("======== Queue Full ========\n");
                 return;
             }
             else
@@ -43,12 +48,34 @@ namespace AssignmentOneQueue
             }
         }
 
+        public void AddItem(T item)
+        {
+            if (IsFull(this))
+            {
+                IncreaseQueueSize();
+            }
+
+                last++;
+                _queue[last] = item;
+                length++;
+            
+        }
+
+        private void IncreaseQueueSize()
+        {
+            sizeOfQueue= sizeOfQueue + 1;
+            T[] _newQueue = new T[sizeOfQueue];
+            _queue.CopyTo(_newQueue, 0);
+
+            _queue = _newQueue;
+        }
+
         public T RemoveItem()
         {
 
             if (IsEmpty(this))
             {
-                Console.WriteLine("Queue Empty");
+                Console.WriteLine("======== Queue Empty ========\n");
                 return default(T);
             }
             else
@@ -61,18 +88,20 @@ namespace AssignmentOneQueue
                 }
                 length--;
                 last--;
-                Console.Write("Removed." + data);
+                Console.Write("======== Removed : " + data + " ========\n");
                 return data;
             }
         }
 
         public void Iterate()
         {
+            Console.WriteLine("\n======== Queue Data Begin ========\n");
             for (int i = first; i <= last; i++)
             {
                 if (_queue[i] != null)
                     Console.WriteLine(_queue[i]);
             }
+            Console.WriteLine("\n======== Queue Data End ========\n\n");
         }
 
         public bool IsEmpty(QueueGeneric<T> queue)

@@ -17,7 +17,13 @@ namespace ChallengesTwo
             Fibonacci fb = new Fibonacci();
             do
             {
-                fb.FastFinder(Decimal.Parse(Console.ReadLine()));
+                try
+                {
+                    fb.FastFinder(Decimal.Parse(Console.ReadLine()));
+                }catch(Exception e)
+                {
+                    Console.WriteLine("Please input Interger numbers only.");
+                }
             } while (true);
         }
 

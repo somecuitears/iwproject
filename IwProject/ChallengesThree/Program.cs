@@ -7,6 +7,7 @@ namespace ChallengesThree
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("LIS");
             LISequence iSeq = new LISequence();
             iSeq.SetArraySize();
             iSeq.SetArrayElements();

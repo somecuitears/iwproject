@@ -63,20 +63,16 @@ namespace ChallengesOne.Lib
             catch(Exception e)
             {
                 
-                Console.Write("Enter 24 Hour time format seperated with space");
+                Console.Write("Enter 24 Hour time format seperated with space\n");
+                
             }
-            finally
-            {
-                Initi(_tempInput);
-            }
-            
-
+           
             return true;
         }
 
         private void DisplayResult(String message)
         {
-            if (!message.Equals(null))
+            if (message != null)
             {
                 Console.Write("Invalid Date Format");
             }
