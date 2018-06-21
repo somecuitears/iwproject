@@ -8566,8 +8566,36 @@ h3 {
     border-color: #dee2e6;
   }
 }
-.myStyleP {
-  margin: 122px;
+* {
+  box-sizing: border-box;
+}
+
+.carousel-cell {
+  width: 100%;
+  height: auto;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 2px;
+  font-size: 80px;
+  color: white;
+}
+
+.android-logo {
+  margin: 25px 30px 25px 40px;
+  width: 121px;
+}
+
+.flickity-viewport {
+  height: 400px !important;
 }
 
 /*# sourceMappingURL=custom.css.map */
