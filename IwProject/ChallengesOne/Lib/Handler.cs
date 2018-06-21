@@ -6,8 +6,9 @@ namespace ChallengesOne.Lib
 {
     public class Handler
     {
-        private String _time, _duration;
+        private String forS ="dep";
         int tHr = 0, tMin = 0;
+        bool hrCheck, minCheck;
         public void Execute()
         {
             //_time = Console.ReadLine();
@@ -30,7 +31,7 @@ namespace ChallengesOne.Lib
             //        Console.WriteLine(ZeroFormat(nHr) + " " + ZeroFormat(nMin));
             //    }
             //}
-            if (Initi(_time) && Initi(_duration))
+            if (Initi(forS="dep") && Initi(forS="dur"))
             {
                 tHr = OffSet(tHr, 24);
                 if (tMin >= 60)
@@ -47,26 +48,41 @@ namespace ChallengesOne.Lib
 
         private bool Initi(String _tempInput)
         {
-            
-            _tempInput = Console.ReadLine();
-            String[] subString = _tempInput.Split(" ");
-            try { 
-            bool hrCheck = Int32.TryParse(subString[0], out int hour);
-            bool minCheck = Int32.TryParse(subString[1], out int minute);
-                if (hrCheck && minCheck && hour >= 0 && hour <= 23 && minute >= 0 && minute <= 59)
-                {
-                    tHr += hour;
-                    tMin += minute;
-                    return true;
-                }
-            }
-            catch(Exception e)
+            if(_tempInput == "dep")
             {
-                
-                Console.Write("Enter 24 Hour time format seperated with space\n");
-                
+                Console.WriteLine("Enter Departure Time (HH MM) : ");
             }
-           
+            else
+            {
+                Console.WriteLine("Enter Duration of the Travel (HH MM) : ");
+            }
+            do
+            { 
+                try
+                {
+                    _tempInput = Console.ReadLine();
+                    String[] subString = _tempInput.Split(" ");
+                    hrCheck = Int32.TryParse(subString[0], out int hour);
+                    minCheck = Int32.TryParse(subString[1], out int minute);
+                    if (hrCheck && minCheck && hour >= 0 && hour <= 23 && minute >= 0 && minute <= 59)
+                    {
+                        tHr += hour;
+                        tMin += minute;
+                        return true;
+                    }
+
+                }
+                catch (Exception e)
+                {
+
+                    Console.Write("Enter 24 Hour time format \n");
+
+                }
+            } while (!hrCheck && !minCheck);
+
+
+
+
             return true;
         }
 
@@ -76,7 +92,13 @@ namespace ChallengesOne.Lib
             {
                 Console.Write("Invalid Date Format");
             }
+            Console.WriteLine();
+            Console.WriteLine("======= You will reach at : =======");
+            Console.WriteLine();
             Console.WriteLine(ZeroFormat(tHr) + " " + ZeroFormat(tMin));
+            Console.WriteLine();
+            Console.WriteLine("======= =================== =======");
+            Console.WriteLine();
         }
 
         private int OffSet(int temp, int val)

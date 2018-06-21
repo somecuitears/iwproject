@@ -63,18 +63,18 @@
                     <div style="margin-bottom: 20px">It’s free and always will be.</div>
                     <div>
                         <tr>
-                            <td><input type="text" placeholder="First Name" style="width: 190px;" /> <input type="text" placeholder="Last Name" style="width: 190px;" /></td>
+                            <td><input type="text" placeholder="First Name" style="width: 190px;" id="fname" onfocusout="NameValidate();" /><input type="text" placeholder="Last Name" style="width: 190px;" id="lname" /></td>
 
                         </tr>
                     </div>
                     <div>
                         <tr>
-                            <td><input type="text" placeholder="Mobile number or Email" /> </td>
+                            <td><input type="text" placeholder="Mobile number or Email" id="nemail" /> </td>
                         </tr>
                     </div>
                     <div>
                         <tr>
-                            <td><input width="400px" type="text" placeholder="New password" /> </td>
+                            <td><input width="400px" type="password" placeholder="New password" id="password" /> </td>
                         </tr>
                     </div>
                     <div style="margin: 0 20px 20px 0;">
@@ -101,7 +101,7 @@
                     <div>
                         <p style="font-size: 12px; padding-right: 80px;font-weight: 400;">By clicking Sign Up, you agree to our Terms, Data Policy and Cookies Policy. You may receive SMS Notifications from us and can opt out any time.</p>
                     </div>
-                    <div><button style="background-image: url(image/btnBg.png);font-weight: 400">Sign Up</button></div>
+                    <div><button style="background-image: url(image/btnBg.png);font-weight: 400" onclick="NameValidate();">Sign Up</button></div>
                     <div>
                         <hr>
                     </div>

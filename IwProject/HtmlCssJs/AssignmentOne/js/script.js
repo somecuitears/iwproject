@@ -19,5 +19,15 @@ function LoginValidate() {
 
 
 function SignUpValidation() {
+    NameValidate();
+    var lname = document.getElementById("lname");
+    var email = document.getElementById("nemail");
+    var password = document.getElementById("password");
+}
 
+function NameValidate() {
+    var fname = document.getElementById("fname");
+    if (fname.value === "") {
+        fname.className = "mi";
+    }
 }

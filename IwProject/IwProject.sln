@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Oops", "Oops\Oops.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Consol", "Consol\Consol.csproj", "{9F1D6377-9C50-4824-9918-09FFDFE9A88D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AssignmentOneQueue", "AssignmentOneQueue\AssignmentOneQueue.csproj", "{92DED1B6-E617-4658-A493-080B89850948}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AssignmentOneQueue", "AssignmentOneQueue\AssignmentOneQueue.csproj", "{92DED1B6-E617-4658-A493-080B89850948}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeekTwo", "WeekTwo\WeekTwo.csproj", "{BA95A79B-38D4-4EFD-844C-F18E401B846B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{92DED1B6-E617-4658-A493-080B89850948}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92DED1B6-E617-4658-A493-080B89850948}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92DED1B6-E617-4658-A493-080B89850948}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA95A79B-38D4-4EFD-844C-F18E401B846B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA95A79B-38D4-4EFD-844C-F18E401B846B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA95A79B-38D4-4EFD-844C-F18E401B846B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA95A79B-38D4-4EFD-844C-F18E401B846B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

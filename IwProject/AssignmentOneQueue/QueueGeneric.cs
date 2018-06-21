@@ -6,7 +6,6 @@ namespace AssignmentOneQueue
 {
     class QueueGeneric<T>
     {
-
         private int length; //How many holding.
         private int sizeOfQueue;      //Size of Queue
         private int first;   //Beginning of queue
@@ -33,37 +32,72 @@ namespace AssignmentOneQueue
             _queue = new T[sizeOfQueue];
         }
 
-        public void AddItemF(T item)
+        public bool AddItemF(string item)
         {
-            if (IsFull(this))
+            try
             {
-                Console.WriteLine("======== Queue Full ========\n");
-                return;
+                T itm = (T)Convert.ChangeType(item, typeof(T));
+                if (IsFull(this))
+                {
+                    Console.WriteLine("======== Queue Full ========\n");
+                    return false;
+                }
+                else
+                {
+                    last++;
+                    _queue[last] = itm;
+                    length++;
+                    return true;
+                }
+
             }
-            else
+            catch
             {
-                last++;
-                _queue[last] = item;
-                length++;
+                return false;
             }
+
         }
 
-        public void AddItem(T item)
+        public bool AddItem(string item)
         {
-            if (IsFull(this))
+            try
             {
-                IncreaseQueueSize();
-            }
+                T itm = (T)Convert.ChangeType(item, typeof(T));
+                if (IsFull(this))
+                {
+                    IncreaseQueueSize();
+                }
 
                 last++;
-                _queue[last] = item;
+                _queue[last] = itm;
                 length++;
-            
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+
+        }
+
+        public bool IsConvertable(string item)
+        {
+            try
+            {
+                T itm = (T)Convert.ChangeType(item, typeof(T));
+                return true;
+            }
+            catch
+            {
+                Console.WriteLine("Invalid Input");
+                return false;
+            }
+
         }
 
         private void IncreaseQueueSize()
         {
-            sizeOfQueue= sizeOfQueue + 1;
+            sizeOfQueue = sizeOfQueue + 1;
             T[] _newQueue = new T[sizeOfQueue];
             _queue.CopyTo(_newQueue, 0);
 

@@ -1,4 +1,4 @@
-﻿susing System;
+﻿using System;
 
 namespace AssignmentOneQueue
 {
@@ -36,9 +36,9 @@ namespace AssignmentOneQueue
                     case 4:
                         Console.WriteLine("Size of Queue = 10;");
                         Console.WriteLine("Type: ");
-                        bool a = true;
-                        Type myType = Type.GetType("bool");
-                        QueueGeneric<String> fGeneric = new QueueGeneric<string>();
+                        //bool a = true;
+                        //Type myType = Type.GetType("bool");
+                        QueueGeneric<float> fGeneric = new QueueGeneric<float>();
                         ContFunction(fGeneric);
                         break;
                     case 5:
@@ -60,7 +60,7 @@ namespace AssignmentOneQueue
             }
         }
 
-        private static void ContFunction(QueueGeneric<String> qString)
+        private static void ContFunction<T>(QueueGeneric<T> qString)
         {
             bool continuee = true;
             while (continuee)
@@ -72,14 +72,21 @@ namespace AssignmentOneQueue
                     bool con = true;
                     do
                     {
-                        Console.WriteLine("Enter string to Queue");
+                        Console.WriteLine("Enter "+typeof(T)+" to Queue");
                         if (qString.InfOption)
                         {
-                            qString.AddItem(Console.ReadLine());
+
+                            if (!qString.AddItem(Console.ReadLine()))
+                            {
+                                continue;
+                            }
                         }
                         else
                         {
-                            qString.AddItemF(Console.ReadLine());
+                            if (!qString.AddItemF(Console.ReadLine()))
+                            {
+                                continue;
+                            }
                         }
                         
                         Console.WriteLine("Continue? (y/n)");
