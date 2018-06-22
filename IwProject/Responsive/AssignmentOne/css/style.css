@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box; }
+
+.clear {
+  clear: both; }
+
+.no-margin-padding, .wrapper, #top-bar .top-bar-list {
+  margin: 0px;
+  padding: 0px; }
+
+.wrapper {
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: left;
+  word-wrap: break-word; }
+
+#top-bar {
+  background-color: #0e74a5; }
+  #top-bar a,
+  #top-bar li {
+    color: #fff; }
+  #top-bar ul li {
+    display: inline-block;
+    margin-right: 10px;
+    padding-right: 15px;
+    border-right: 1px solid; }
+  #top-bar .top-bar-wrapper {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-size: 12px; }
+  #top-bar .top-bar-left {
+    float: left; }
+  #top-bar .top-bar-list {
+    list-style: none;
+    overflow: hidden; }
+  #top-bar .top-bar-right {
+    float: right; }
+
+#logo-wrapper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 150px;
+  background-color: azure; }
+  #logo-wrapper .logo-left {
+    width: 50%;
+    float: left; }
+  #logo-wrapper .logo-right {
+    width: 50%;
+    background-color: beige;
+    height: 50px;
+    float: left; }
+    #logo-wrapper .logo-right i {
+      height: 60px;
+      width: 60px;
+      line-height: 58px;
+      font-size: 20px;
+      text-align: center;
+      float: left; }
+    #logo-wrapper .logo-right .logo-right-first {
+      background-color: aquamarine;
+      width: 50%;
+      height: 60px;
+      float: left; }
+      #logo-wrapper .logo-right .logo-right-first .for-phone {
+        width: 60px;
+        height: 60px;
+        background-color: chocolate;
+        border: 2px solid darkgray;
+        border-radius: 50%;
+        margin-right: 20px;
+        float: left; }
+    #logo-wrapper .logo-right .logo-right-second {
+      background-color: burlywood;
+      width: 50%;
+      height: 60px;
+      float: left; }
+      #logo-wrapper .logo-right .logo-right-second .for-time {
+        width: 60px;
+        height: 60px;
+        background-color: chocolate;
+        border: 2px solid darkgray;
+        border-radius: 50%;
+        margin-right: 20px;
+        float: left; }
+
+#banner {
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("/images/background-dark.jpg");
+  color: #fff;
+  padding-top: 150px; }
+  #banner .image {
+    width: 100%; }
+
+/*# sourceMappingURL=style.css.map */

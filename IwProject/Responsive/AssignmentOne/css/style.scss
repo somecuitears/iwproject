@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+}
+
+.clear {
+    clear: both;
+}
+
+.no-margin-padding {
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrapper {
+    @extend .no-margin-padding;
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+#top-bar {
+    background-color: #0e74a5;
+    a,
+    li {
+        color: #fff;
+    }
+    ul li {
+        display: inline-block;
+        margin-right: 10px;
+        padding-right: 15px;
+        border-right: 1px solid;
+    } // Top Bar Left
+    .top-bar-wrapper {
+        padding-top: 10px;
+        padding-bottom: 30px;
+        font-size: 12px;
+    }
+    .top-bar-left {
+        float: left;
+    }
+    .top-bar-list {
+        @extend .no-margin-padding;
+        list-style: none;
+        overflow: hidden;
+    } // Top Bar Right
+    .top-bar-right {
+        float: right;
+    }
+}
+
+// Logo 
+#logo-wrapper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    background-color: azure;
+    .logo-left {
+        width: 50%;
+        float: left;
+    }
+    .logo-right {
+        width: 50%;
+        background-color: beige;
+        height: 50px;
+        float: left;
+        i {
+            height: 60px;
+            width: 60px;
+            line-height: 58px;
+            font-size: 20px;
+            text-align: center;
+            float: left;
+        }
+        .logo-right-first {
+            background-color: aquamarine;
+            width: 50%;
+            height: 60px;
+            float: left;
+            .for-phone {
+                width: 60px;
+                height: 60px;
+                background-color: chocolate;
+                border: 2px solid darkgray;
+                border-radius: 50%;
+                margin-right: 20px;
+                float: left;
+            }
+        }
+        .logo-right-second {
+            background-color: burlywood;
+            width: 50%;
+            height: 60px;
+            float: left;
+            .for-time {
+                width: 60px;
+                height: 60px;
+                background-color: chocolate;
+                border: 2px solid darkgray;
+                border-radius: 50%;
+                margin-right: 20px;
+                float: left;
+            }
+        }
+    }
+}
+
+#banner{
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("/images/background-dark.jpg");
+    color: #fff;
+    padding-top: 150px;
+    .image{
+        
+        width: 100%;
+    }
+}
